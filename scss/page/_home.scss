@@ -131,12 +131,8 @@
 
 .contact {
     &__wrapper {
-        display: flex;
-        flex-direction: column;
-        @include mediaQuery {
-           display: flex;
-           flex-direction: row;
-        }
+        @include grid(3);
+        grid-gap: 5rem;
         i {
             font-size: 4rem;
         }
