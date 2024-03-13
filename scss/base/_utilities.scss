@@ -56,6 +56,10 @@ $alignments: left, center, right, justify;
     .gap-#{$i} {
         gap: #{$i}rem;
     }
+
+    .fs-#{$i} {
+        font-size: #{$i}rem;
+    }
   
 }
 

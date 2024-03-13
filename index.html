@@ -11,15 +11,15 @@
     <header class="header">
         <div class="container">
             <div class="header__wrapper flex justify-between">
-                <a href="">A</a>
-                <ul class="flex gap-2">
+                <a href="" class="text-accent">A</a>
+                <ul class="flex gap-2" id="menu">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Skills</a></li>
                     <li><a href="#">Services</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
-                <i>icon</i>
+                <i class="fas fa-bars ic-accent p-1 fs-3" id="toggleMenu"></i>
             </div>
         </div>
     </header>
@@ -41,7 +41,7 @@
     
     <section class="about bg-secondary py-8">
         <div class="container">
-            <div class="block-header text-center mb-8">
+            <div class="block-header text-center mb-2">
                 <h2 class="text-accent" data-text="About">About Me</h2>
             </div>
             <div class="about__wrapper">
@@ -70,9 +70,21 @@
                             <li>cocomartin@gmail.com</li>
                         </ul>
                 </div>
-                <div class="text-center">
-                <h4 class="mb-3">Education</h4>
+                <div class="text-center mb-4">
+                <h4 class="mb-2 text-accent">Education</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, repudiandae!</p>
+                </div>
+                <div class="about__icons">
+                    <ul class="flex justify-center">
+                        <li><i class="fa-solid fa-basketball ic-accent fs-2 mx-2"></i></li>
+                        <li><i class="fa-brands fa-facebook ic-accent fs-2 mx-2"></i></li>
+                        <li><i class="fa-brands fa-twitter ic-accent fs-2 mx-2"></i></li>
+                        <li><i class="fa-brands fa-pinterest ic-accent fs-2 mx-2"></i></li>
+                        <li><i class="fa-brands fa-instagram ic-accent fs-2 mx-2"></i></li>
+                    </ul>
+                </div>
+                <div>
+
                 </div>
             </div>
             </div>
@@ -84,49 +96,66 @@
             <div class="block-header text-center mb-8">
                 <h2 class="text-accent" data-text="Skills">Skills</h2>
             </div>
-            <div class="skills__wrapper">
+            <div class="skills__wrapper mb-3">
                 <div class="bar mb-5">
                     <ul class="flex justify-between">
                         <li>Adobe Photoshop</li>
                         <li>90%</li>
                     </ul>
-                    <div class="skillbar w-50"></div>
+                    <div class="skillbar w-90"></div>
                 </div>
                 <div class="bar mb-5">
                     <ul class="flex justify-between">
-                        <li>Adobe Photoshop</li>
+                        <li>Photography</li>
                         <li>90%</li>
                     </ul>
-                    <div class="skillbar"></div>
+                    <div class="skillbar w-90"></div>
                 </div>
                 <div class="bar mb-5">
                     <ul class="flex justify-between">
-                        <li>Adobe Photoshop</li>
-                        <li>90%</li>
+                        <li>Adobe Illustrator</li>
+                        <li>95%</li>
                     </ul>
-                    <div class="skillbar"></div>
+                    <div class="skillbar w-95"></div>
                 </div>
                 <div class="bar mb-5">
                     <ul class="flex justify-between">
-                        <li>Adobe Photoshop</li>
-                        <li>90%</li>
+                        <li>Adobe Premiere Pro</li>
+                        <li>95%</li>
                     </ul>
-                    <div class="skillbar"></div>
+                    <div class="skillbar w-95"></div>
                 </div>
                 <div class="bar mb-5">
                     <ul class="flex justify-between">
-                        <li>Adobe Photoshop</li>
+                        <li>Adobe After Effects</li>
                         <li>90%</li>
                     </ul>
-                    <div class="skillbar"></div>
+                    <div class="skillbar w-90"></div>
                 </div>
                 <div class="bar mb-5">
                     <ul class="flex justify-between">
-                        <li>Adobe Photoshop</li>
-                        <li>90%</li>
+                        <li>Adobe XD</li>
+                        <li>95%</li>
                     </ul>
-                    <div class="skillbar"></div>
+                    <div class="skillbar w-95"></div>
                 </div>
+                <div class="bar mb-5">
+                    <ul class="flex justify-between">
+                        <li>Autodesk 3ds Max</li>
+                        <li>85%</li>
+                    </ul>
+                    <div class="skillbar w-85"></div>
+                </div>
+                <div class="bar mb-5">
+                    <ul class="flex justify-between">
+                        <li>Cinema 4D</li>
+                        <li>85%</li>
+                    </ul>
+                    <div class="skillbar w-85"></div>
+                </div>
+            </div>
+            <div class="flex justify-center">
+            <h3 class="text-white fs-4">I Am Available For Freelance!</h3>
             </div>
         </div>
     </section>
@@ -137,8 +166,8 @@
                 <h2 class="text-accent" data-text="Portfolio">Portfolio</h2>
             </div>
         
-            <ul class="flex justify-center gap-6 mb-8">
-                <li><a href="">Logo</a></li>
+            <ul class="flex justify-center mb-8">
+                <li><a href="" class="text-accent">Logo</a></li>
                 <li><a href="">Branding</a></li>
                 <li><a href="">3D Modeling</a></li>
                 <li><a href="">Motion</a></li>
@@ -154,40 +183,40 @@
         </div>
     </section>
 
-    <section class="services py-8 bg-primary">
+    <section class="services py-10 bg-primary">
         <div class="container">
             <div class="block-header text-center mb-8">
                 <h2 class="text-accent" data-text="Services">Services</h2>
             </div>
             <div class="services__wrapper">
-                <div class="services__card text-center">
-                    <i class="fa-solid fa-paintbrush ic-accent mb-4"></i>
-                    <h5 class="mb-1">Graphic Design</h5>
+                <div class="services__card text-center p-2">
+                    <i class="fa-solid fa-paintbrush ic-accent mb-4 fs-5"></i>
+                    <h5 class="mb-1 fs-2">Graphic Design</h5>
                     <p class="text-justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque, sapiente.</p>
                 </div>
-                <div class="services__card text-center">
-                    <i class="fa-solid fa-pen-to-square ic-accent mb-4"></i>
-                    <h5 class="mb-1">Graphic Design</h5>
+                <div class="services__card text-center p-2">
+                    <i class="fa-solid fa-pen-to-square ic-accent mb-4 fs-5"></i>
+                    <h5 class="mb-1 fs-2">Video Editing</h5>
                     <p class="text-justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque, sapiente.</p>
                 </div>
-                <div class="services__card text-center">
-                    <i class="fa-solid fa-bullhorn ic-accent mb-4"></i>
-                    <h5 class="mb-1">Graphic Design</h5>
+                <div class="services__card text-center p-2">
+                    <i class="fa-solid fa-bullhorn ic-accent mb-4 fs-5"></i>
+                    <h5 class="mb-1 fs-2">Branding</h5>
                     <p class="text-justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque, sapiente.</p>
                 </div>
-                <div class="services__card text-center">
-                    <i class="fa-solid fa-desktop ic-accent mb-4"></i>
-                    <h5 class="mb-1">Graphic Design</h5>
+                <div class="services__card text-center p-2">
+                    <i class="fa-solid fa-desktop ic-accent mb-4 fs-5"></i>
+                    <h5 class="mb-1 fs-2">Web Design</h5>
                     <p class="text-justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque, sapiente.</p>
                 </div>
-                <div class="services__card text-center">
-                    <i class="fa-solid fa-film ic-accent mb-4"></i>
-                    <h5 class="mb-1">Graphic Design</h5>
+                <div class="services__card text-center p-2">
+                    <i class="fa-solid fa-film ic-accent mb-4 fs-5"></i>
+                    <h5 class="mb-1 fs-2">Motion Graphic</h5>
                     <p class="text-justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque, sapiente.</p>
                 </div>
-                <div class="services__card text-center">
-                    <i class="fa-solid fa-mobile-screen-button ic-accent mb-4"></i>
-                    <h5 class="mb-1">Graphic Design</h5>
+                <div class="services__card text-center p-2">
+                    <i class="fa-solid fa-mobile-screen-button ic-accent mb-4 fs-5"></i>
+                    <h5 class="mb-1 fs-2">3d Modeling</h5>
                     <p class="text-justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque, sapiente.</p>
                 </div>
             </div>
@@ -199,25 +228,38 @@
             <div class="block-header text-center mb-8">
                 <h2 >Contact Me</h2>
             </div>
-            <div class="contact__wrapper">
-                <div class="contact__card text-center">
+            <div class="contact__wrapper mb-10">
+                <div class="contact__card text-center mx-9">
                     <i class="fa-solid fa-mobile-screen-button ic-white mb-2"></i>
                     <h5 class="mb-1">Call Us</h5>
-                    <h5 class="mb-1">01689021070</h5>
+                    <p class="mb-2 fs-2">01689021070</p>
                 </div>
-                <div class="contact__card text-center">
+                <div class="contact__card text-center mx-9">
                     <i class="fa-regular fa-envelope ic-white mb-2"></i>
                     <h5 class="mb-1">Email</h5>
-                    <h5>cocomaartin@gmail.com</h5>
+                    <p class="mb-2 fs-2">cocomartin@gmail.com</p>
                 </div>
-                <div class="contact__card text-center">
+                <div class="contact__card text-center mx-9">
                     <i class="fa-regular fa-map ic-white mb-2"></i>
                     <h5 class="mb-1">Visit Office</h5>
-                    <h5>Uttara, Dhaka Bangladesh</h5>
+                    <p class="mb-2 fs-2">Bangladesh</p>
                 </div>
+                
+            </div>
+            <div class="flex justify-center">
                 <a href="#" class="p-1 bg-white text-accent">SEND MESSAGE</a>
             </div>
         </div>
     </section>
+    <script>
+        const toggleMenu = document.querySelector("#toggleMenu");
+        const menu = document.querySelector("#menu");
+        const body = document.querySelector("body");
+
+        toggleMenu.addEventListener('click', ()=> {
+            menu.classList.toggle("open");
+            body.classList.toggle("open");
+        })
+    </script>
 </body>
 </html>

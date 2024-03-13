@@ -33,6 +33,11 @@ body {
   font-size: 1.6rem;
 }
 
+body.open {
+  overflow: hidden;
+  height: 100vh;
+}
+
 a {
   text-decoration: none;
   color: #fff;
@@ -158,6 +163,10 @@ p {
   gap: 1rem;
 }
 
+.fs-1 {
+  font-size: 1rem;
+}
+
 .mb-2 {
   margin-bottom: 2rem;
 }
@@ -176,6 +185,10 @@ p {
 
 .gap-2 {
   gap: 2rem;
+}
+
+.fs-2 {
+  font-size: 2rem;
 }
 
 .mb-3 {
@@ -198,6 +211,10 @@ p {
   gap: 3rem;
 }
 
+.fs-3 {
+  font-size: 3rem;
+}
+
 .mb-4 {
   margin-bottom: 4rem;
 }
@@ -216,6 +233,10 @@ p {
 
 .gap-4 {
   gap: 4rem;
+}
+
+.fs-4 {
+  font-size: 4rem;
 }
 
 .mb-5 {
@@ -238,6 +259,10 @@ p {
   gap: 5rem;
 }
 
+.fs-5 {
+  font-size: 5rem;
+}
+
 .mb-6 {
   margin-bottom: 6rem;
 }
@@ -256,6 +281,10 @@ p {
 
 .gap-6 {
   gap: 6rem;
+}
+
+.fs-6 {
+  font-size: 6rem;
 }
 
 .mb-7 {
@@ -278,6 +307,10 @@ p {
   gap: 7rem;
 }
 
+.fs-7 {
+  font-size: 7rem;
+}
+
 .mb-8 {
   margin-bottom: 8rem;
 }
@@ -296,6 +329,10 @@ p {
 
 .gap-8 {
   gap: 8rem;
+}
+
+.fs-8 {
+  font-size: 8rem;
 }
 
 .mb-9 {
@@ -318,6 +355,10 @@ p {
   gap: 9rem;
 }
 
+.fs-9 {
+  font-size: 9rem;
+}
+
 .mb-10 {
   margin-bottom: 10rem;
 }
@@ -336,6 +377,10 @@ p {
 
 .gap-10 {
   gap: 10rem;
+}
+
+.fs-10 {
+  font-size: 10rem;
 }
 
 .w-full {
@@ -428,6 +473,47 @@ p {
   z-index: -1;
 }
 
+.header__wrapper ul.open {
+  visibility: visible;
+  opacity: 1;
+}
+.header__wrapper ul {
+  position: fixed;
+  background: #000;
+  top: 5rem;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 99999;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30%;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s ease;
+}
+@media (min-width: 42rem) {
+  .header__wrapper ul {
+    position: static;
+    background-color: unset;
+    padding: unset;
+    width: auto;
+    height: unset;
+    flex-direction: row;
+    visibility: visible;
+    opacity: 1;
+  }
+  .header__wrapper ul li a {
+    font-size: 1.6rem;
+  }
+}
+.header__wrapper ul li {
+  text-align: center;
+}
+.header__wrapper ul li a {
+  font-size: 3rem;
+}
+
 .banner__wrapper {
   min-height: 80rem;
   display: flex;
@@ -456,24 +542,39 @@ p {
 }
 
 .about__wrapper {
-  display: grid;
-  grid-template-columns: 0.5fr 1fr;
-  grid-gap: 7rem;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 42rem) {
+  .about__wrapper {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-gap: 7rem;
+  }
 }
 .about__image {
   position: relative;
   isolation: isolate;
+  align-self: center;
 }
 .about__image::after {
   content: "";
   position: absolute;
-  top: 3rem;
+  top: 5rem;
   left: 3rem;
   border: 0.4rem solid #f16b4e;
   background-color: transparent;
   width: 100%;
-  height: 82%;
+  height: 93%;
   z-index: -1;
+}
+.about__content h3 {
+  text-align: center;
+}
+@media (min-width: 42rem) {
+  .about__content h3 {
+    text-align: start;
+  }
 }
 .about__contact {
   display: grid;
@@ -502,16 +603,24 @@ p {
   height: 100%;
   background: #f16b4e;
 }
-.skills .skillbar.w-50::before {
-  width: 50%;
-}
-.skills .skillbar.w-40::before {
-  width: 50%;
+.skills .skillbar.w-85::before {
+  width: 85%;
 }
 .skills .skillbar.w-90::before {
-  width: 50%;
+  width: 90%;
+}
+.skills .skillbar.w-95::before {
+  width: 95%;
 }
 
+.portfolio ul {
+  gap: 2rem;
+}
+@media (min-width: 42rem) {
+  .portfolio ul {
+    gap: 9rem;
+  }
+}
 .portfolio__img {
   display: flex;
   justify-content: center;
@@ -527,21 +636,30 @@ p {
 
 .services__wrapper {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem;
   grid-gap: 4rem;
 }
-.services__card i {
-  font-size: 5rem;
+@media (min-width: 42rem) {
+  .services__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+  }
 }
-.services__card h5 {
-  font-size: 2rem;
+.services__card {
+  box-shadow: rgba(7, 7, 7, 0.2) 0px 2px 8px 0px;
 }
+
 .contact__wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1rem;
-  grid-gap: 5rem;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 42rem) {
+  .contact__wrapper {
+    display: flex;
+    flex-direction: row;
+  }
 }
 .contact__wrapper i {
   font-size: 4rem;
